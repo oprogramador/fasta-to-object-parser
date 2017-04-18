@@ -7,4 +7,4 @@ cd ..
 path=node_modules/fna-parser
 mkdir -p node_modules
 rm -f $path
-ln -s ../src $path
+ln -s ../${APP_DIR:=build} $path
