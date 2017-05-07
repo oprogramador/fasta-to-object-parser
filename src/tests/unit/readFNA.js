@@ -84,4 +84,24 @@ GCA
       },
     ]);
   });
+
+  it('reads data with multiple identifiers', () => {
+    const fna = `
+>gi|528476511|ref|NW_004929286.1| Homo sapiens chromosome 1 genomic scaffold, alternate assembly CHM1_1.1
+TAACCCTA
+CCTAA
+    `;
+    const data = readFNA(fna);
+
+    expect(data).to.deep.equal([
+      {
+        chromosome: '1',
+        description: 'Homo sapiens chromosome 1 genomic scaffold, alternate assembly CHM1_1.1',
+        gi: '528476511',
+        ref: 'NW_004929286.1',
+        sequence: 'TAACCCTACCTAA',
+        specie: 'Homo sapiens',
+      },
+    ]);
+  });
 });
