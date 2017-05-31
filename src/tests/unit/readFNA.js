@@ -85,6 +85,25 @@ GCA
     ]);
   });
 
+  it('returns proper data with no chromosome info', () => {
+    const fna = `
+>ref|NG_012059.2| Homo sapiens collagen type IV alpha 6 chain (COL4A6)
+GGCCAAGG
+GCA
+    `;
+    const data = readFNA(fna);
+
+    expect(data).to.deep.equal([
+      {
+        description: 'Homo sapiens collagen type IV alpha 6 chain (COL4A6)',
+        ref: 'NG_012059.2',
+        sequence: 'GGCCAAGGGCA',
+        specie: 'Homo sapiens',
+        symbol: 'COL4A6',
+      },
+    ]);
+  });
+
   it('reads data with multiple identifiers', () => {
     const fna = `
 >gi|528476511|ref|NW_004929286.1| Homo sapiens chromosome 1 genomic scaffold, alternate assembly CHM1_1.1

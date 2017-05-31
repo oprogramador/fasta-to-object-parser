@@ -1,6 +1,6 @@
 {
   "name": "fna-parser",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "DNA parser of fna (FASTA) format",
   "main": "build/index.js",
   "scripts": {

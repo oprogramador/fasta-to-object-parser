@@ -13,14 +13,16 @@ export default (fna) => {
     const identifiersKeys = headers.filter((value, i) => i % 2 === 0);
     const identifiersValues = headers.filter((value, i) => i % 2 === 1);
     const identifiers = _.zipObject(identifiersKeys, identifiersValues);
+    const chromosomeInfo = description.match(/chromosome ([XY0-9]+)/);
+    const chromosomeValues = chromosomeInfo ? { chromosome: chromosomeInfo[1] } : {};
 
     return Object.assign(
       {
-        chromosome: description.match(/chromosome ([XY0-9]+)/)[1],
         description,
         sequence: lines.splice(1).join(''),
         specie: description.match(/[A-Za-z]+ [A-Za-z]+/)[0],
       },
+      chromosomeValues,
       identifiers,
       symbolObject
     );
