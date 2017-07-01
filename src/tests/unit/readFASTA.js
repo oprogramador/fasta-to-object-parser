@@ -1,7 +1,7 @@
 import expect from 'fasta-parser/tests/expect';
-import readFNA from 'fasta-parser/readFNA';
+import readFASTA from 'fasta-parser/readFASTA';
 
-describe('readFNA', () => {
+describe('readFASTA', () => {
   it('returns proper data for multiple chromosomes', () => {
     const fasta = `
 >ref|NG_012059.2| Homo sapiens collagen type IV alpha 6 chain (COL4A6), RefSeqGene on chromosome X  
@@ -19,7 +19,7 @@ TTCCCTC
 >ref|NG_030029.1| Homo erectus interferon alpha 21 (IFNA21), RefSeqGene on chromosome 9
 TGTCC
     `;
-    const data = readFNA(fasta);
+    const data = readFASTA(fasta);
 
     expect(data).to.deep.equal([
       {
@@ -71,7 +71,7 @@ TGTCC
 GGCCAAGG
 GCA
     `;
-    const data = readFNA(fasta);
+    const data = readFASTA(fasta);
 
     expect(data).to.deep.equal([
       {
@@ -91,7 +91,7 @@ GCA
 GGCCAAGG
 GCA
     `;
-    const data = readFNA(fasta);
+    const data = readFASTA(fasta);
 
     expect(data).to.deep.equal([
       {
@@ -110,7 +110,7 @@ GCA
 TAACCCTA
 CCTAA
     `;
-    const data = readFNA(fasta);
+    const data = readFASTA(fasta);
 
     expect(data).to.deep.equal([
       {

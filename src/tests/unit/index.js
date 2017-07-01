@@ -1,9 +1,9 @@
 import expect from 'fasta-parser/tests/expect';
-import readFNA from 'fasta-parser/index';
-import realReadFNA from 'fasta-parser/readFNA';
+import readFASTA from 'fasta-parser/index';
+import realReadFNA from 'fasta-parser/readFASTA';
 
 describe('index', () => {
-  it('exports readFNA as default', () => {
-    expect(readFNA).to.equal(realReadFNA);
+  it('exports readFASTA as default', () => {
+    expect(readFASTA).to.equal(realReadFNA);
   });
 });
