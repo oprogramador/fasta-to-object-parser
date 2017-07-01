@@ -1,6 +1,6 @@
-import expect from 'fna-parser/tests/expect';
-import readFNA from 'fna-parser/index';
-import realReadFNA from 'fna-parser/readFNA';
+import expect from 'fasta-parser/tests/expect';
+import readFNA from 'fasta-parser/index';
+import realReadFNA from 'fasta-parser/readFNA';
 
 describe('index', () => {
   it('exports readFNA as default', () => {

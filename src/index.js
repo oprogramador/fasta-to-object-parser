@@ -1,3 +1,3 @@
-import readFNA from 'fna-parser/readFNA';
+import readFNA from 'fasta-parser/readFNA';
 
 export default readFNA;

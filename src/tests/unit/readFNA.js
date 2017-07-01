@@ -1,9 +1,9 @@
-import expect from 'fna-parser/tests/expect';
-import readFNA from 'fna-parser/readFNA';
+import expect from 'fasta-parser/tests/expect';
+import readFNA from 'fasta-parser/readFNA';
 
 describe('readFNA', () => {
   it('returns proper data for multiple chromosomes', () => {
-    const fna = `
+    const fasta = `
 >ref|NG_012059.2| Homo sapiens collagen type IV alpha 6 chain (COL4A6), RefSeqGene on chromosome X  
 GGCCAAGG
 GCA
@@ -19,7 +19,7 @@ TTCCCTC
 >ref|NG_030029.1| Homo erectus interferon alpha 21 (IFNA21), RefSeqGene on chromosome 9
 TGTCC
     `;
-    const data = readFNA(fna);
+    const data = readFNA(fasta);
 
     expect(data).to.deep.equal([
       {
@@ -66,12 +66,12 @@ TGTCC
   });
 
   it('returns proper data for single chromosome', () => {
-    const fna = `
+    const fasta = `
 >ref|NG_012059.2| Homo sapiens collagen type IV alpha 6 chain (COL4A6), RefSeqGene on chromosome X
 GGCCAAGG
 GCA
     `;
-    const data = readFNA(fna);
+    const data = readFNA(fasta);
 
     expect(data).to.deep.equal([
       {
@@ -86,12 +86,12 @@ GCA
   });
 
   it('returns proper data with no chromosome info', () => {
-    const fna = `
+    const fasta = `
 >ref|NG_012059.2| Homo sapiens collagen type IV alpha 6 chain (COL4A6)
 GGCCAAGG
 GCA
     `;
-    const data = readFNA(fna);
+    const data = readFNA(fasta);
 
     expect(data).to.deep.equal([
       {
@@ -105,12 +105,12 @@ GCA
   });
 
   it('reads data with multiple identifiers', () => {
-    const fna = `
+    const fasta = `
 >gi|528476511|ref|NW_004929286.1| Homo sapiens chromosome 1 genomic scaffold, alternate assembly CHM1_1.1
 TAACCCTA
 CCTAA
     `;
-    const data = readFNA(fna);
+    const data = readFNA(fasta);
 
     expect(data).to.deep.equal([
       {

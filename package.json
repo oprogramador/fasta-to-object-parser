@@ -1,7 +1,7 @@
 {
-  "name": "fna-parser",
+  "name": "fasta-parser",
   "version": "1.2.2",
-  "description": "DNA parser of fna (FASTA) format",
+  "description": "DNA parser of FASTA format",
   "main": "build/index.js",
   "scripts": {
     "build": "rm -rf build && babel src --out-dir build --ignore tests",
@@ -13,20 +13,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oprogramador/fna-parser.git"
+    "url": "git+https://github.com/oprogramador/fasta-parser.git"
   },
   "keywords": [
     "parser",
-    "fna",
     "dna",
+    "fa",
+    "fna",
+    "mfa",
     "fasta"
   ],
   "author": "oprogramador",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oprogramador/fna-parser/issues"
+    "url": "https://github.com/oprogramador/fasta-parser/issues"
   },
-  "homepage": "https://github.com/oprogramador/fna-parser#readme",
+  "homepage": "https://github.com/oprogramador/fasta-parser#readme",
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",

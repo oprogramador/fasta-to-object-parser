@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
-export default (fna) => {
-  const chromosomes = fna.split('>').filter(chromosome => /[a-z]/.test(chromosome));
+export default (fasta) => {
+  const chromosomes = fasta.split('>').filter(chromosome => /[a-z]/.test(chromosome));
 
   return chromosomes.map((chromosome) => {
     const lines = chromosome.split('\n').filter(line => /[A-Za-z]/.test(line));
