@@ -6,3 +6,29 @@
 
 [![NPM status](https://nodei.co/npm/fasta-to-object-parser.png?downloads=true&stars=true)](https://npmjs.org/package/fasta-to-object-parser
 )
+
+## How to install?
+`npm install --save fasta-to-object-parser`
+
+## How to use?
+```
+    const fasta = `
+>gi|528476511|ref|NW_004929286.1| Homo sapiens chromosome 1 genomic scaffold, alternate assembly CHM1_1.1
+TAACCCTA
+CCTAA
+    `;
+    const data = readFASTA(fasta);
+```
+It returns data in the following format:
+```
+[
+  {
+    chromosome: '1',
+    description: 'Homo sapiens chromosome 1 genomic scaffold, alternate assembly CHM1_1.1',
+    gi: '528476511',
+    ref: 'NW_004929286.1',
+    sequence: 'TAACCCTACCTAA',
+    specie: 'Homo sapiens',
+  },
+]
+```
