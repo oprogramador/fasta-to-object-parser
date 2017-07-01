@@ -1,5 +1,5 @@
-import expect from 'fasta-parser/tests/expect';
-import readFASTA from 'fasta-parser/readFASTA';
+import expect from 'fasta-to-object-parser/tests/expect';
+import readFASTA from 'fasta-to-object-parser/readFASTA';
 
 describe('readFASTA', () => {
   it('returns proper data for multiple chromosomes', () => {

@@ -1,3 +1,3 @@
-import readFASTA from 'fasta-parser/readFASTA';
+import readFASTA from 'fasta-to-object-parser/readFASTA';
 
 export default readFASTA;
