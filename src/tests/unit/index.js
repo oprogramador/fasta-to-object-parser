@@ -1,9 +1,14 @@
+import readFASTA, { writeFASTA } from 'fasta-to-object-parser/index';
 import expect from 'fasta-to-object-parser/tests/expect';
-import readFASTA from 'fasta-to-object-parser/index';
-import realReadFNA from 'fasta-to-object-parser/readFASTA';
+import realReadFASTA from 'fasta-to-object-parser/readFASTA';
+import realWriteFASTA from 'fasta-to-object-parser/writeFASTA';
 
 describe('index', () => {
   it('exports readFASTA as default', () => {
-    expect(readFASTA).to.equal(realReadFNA);
+    expect(readFASTA).to.equal(realReadFASTA);
+  });
+
+  it('exports writeFASTA', () => {
+    expect(writeFASTA).to.equal(realWriteFASTA);
   });
 });
