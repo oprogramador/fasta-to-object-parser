@@ -3,12 +3,14 @@ language: node_js
 env:
   - APP_DIR=src
 node_js:
-  - 6
+  - 8
+  - 10
   - node
 script:
   - npm install
   - npm run lint
   - npm test
+before_deploy: 'npm run prepublishOnly'
 deploy:
   provider: npm
   api_key: $NPM_TOKEN
