@@ -17,6 +17,7 @@ deploy:
   email: $NPM_EMAIL
   on:
     branch: master
+  skip_cleanup: true
 notifications:
   email:
     on_success: never
