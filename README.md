@@ -20,7 +20,7 @@ CCTAA
     const data = readFASTA(fasta);
 ```
 It returns data in the following format:
-```json
+```js
 [
   {
     chromosome: '1',
