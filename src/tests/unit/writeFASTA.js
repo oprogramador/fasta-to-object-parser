@@ -5,8 +5,7 @@ import writeFASTA from 'fasta-to-object-parser/writeFASTA';
 
 describe('writeFASTA', () => {
   it('writes proper data for multiple chromosomes', () => {
-    const expectedFasta =
-`>ref|NG_012059.2| Homo sapiens collagen type IV alpha 6 chain (COL4A6), RefSeqGene on chromosome X
+    const expectedFasta = `>ref|NG_012059.2| Homo sapiens collagen type IV alpha 6 chain (COL4A6), RefSeqGene on chromosome X
 TGGGCGACGTGGGACGGGAATGGCATGTCCTAATCAGGCCGCTGTGGCCTCACTCCCACGGGAGCCAACG
 CCCCGCGAGAACACTGAAACTGTATGGCTATCAACAGGCTTCAGCCAACC
 >ref|NG_016148.1| Homo sapiens neuropeptide Y (NPY), RefSeqGene on chromosome 7
@@ -54,8 +53,7 @@ TCTCCCATGGGTCAGCGTATTATGTCGTACATCCTGTTTAACAAAT`;
   });
 
   it('writes proper data for single chromosome', () => {
-    const expectedFasta =
-`>ref|NG_012059.2| Homo sapiens collagen type IV alpha 6 chain (COL4A6), RefSeqGene on chromosome X
+    const expectedFasta = `>ref|NG_012059.2| Homo sapiens collagen type IV alpha 6 chain (COL4A6), RefSeqGene on chromosome X
 TCCGGACAGGGTCGGTTTGTAACTCGTGCGTTTTATTGCTACAGTGCGAGAAAGATCATCTTACTCGTAA
 GGCTCAGGGGGCAGTCCCCTTA`;
     const data = [
@@ -71,8 +69,7 @@ GGCTCAGGGGGCAGTCCCCTTA`;
   });
 
   it('writes data with multiple identifiers', () => {
-    const expectedFasta =
-`>gi|528476511|ref|NW_004929286.1| Homo sapiens chromosome 1 genomic scaffold, alternate assembly CHM1_1.1
+    const expectedFasta = `>gi|528476511|ref|NW_004929286.1| Homo sapiens chromosome 1 genomic scaffold, alternate assembly CHM1_1.1
 AAGAAGACCTTGAGGCATCCCATATCTGGACTATCAGGAGCTAATTAGGTCCCTGCAATTCATAAGACAC
 CGGAGCGCGTTCACACTGTGCCAAATTATAACGAGAGAAATA`;
     const data = [

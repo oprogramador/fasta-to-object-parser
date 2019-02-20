@@ -24,7 +24,7 @@ export default (fasta) => {
       },
       chromosomeValues,
       identifiers,
-      symbolObject
+      symbolObject,
     );
   });
 };
