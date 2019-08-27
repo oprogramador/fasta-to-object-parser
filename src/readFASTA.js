@@ -16,15 +16,13 @@ export default (fasta) => {
     const chromosomeInfo = description.match(/chromosome ([XY0-9]+)/);
     const chromosomeValues = chromosomeInfo ? { chromosome: chromosomeInfo[1] } : {};
 
-    return Object.assign(
-      {
-        description,
-        sequence: lines.splice(1).join(''),
-        specie: description.match(/[A-Za-z]+ [A-Za-z]+/)[0],
-      },
-      chromosomeValues,
-      identifiers,
-      symbolObject,
-    );
+    return {
+      description,
+      sequence: lines.splice(1).join(''),
+      specie: description.match(/[A-Za-z]+ [A-Za-z]+/)[0],
+      ...chromosomeValues,
+      ...identifiers,
+      ...symbolObject,
+    };
   });
 };
