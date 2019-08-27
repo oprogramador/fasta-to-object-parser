@@ -31,7 +31,7 @@
   "homepage": "https://github.com/oprogramador/fasta-to-object-parser#readme",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
-    "@babel/core": "7.0.0",
+    "@babel/core": "7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "chai": "^4.2.0",
