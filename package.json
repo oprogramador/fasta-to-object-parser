@@ -9,7 +9,7 @@
     "lint": "eslint src",
     "postinstall": "npm run create-project-symlink",
     "prepublishOnly": "npm run build",
-    "test": "mocha -r babel-register --recursive src/tests --timeout 5000"
+    "test": "mocha -r @babel/register --recursive src/tests --timeout 5000"
   },
   "repository": {
     "type": "git",
@@ -30,11 +30,11 @@
   },
   "homepage": "https://github.com/oprogramador/fasta-to-object-parser#readme",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "7.0.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
@@ -43,7 +43,6 @@
     "eslint-config-airbnb-improved": "^4.0.13",
     "mocha": "^6.2.0",
     "sinon": "^7.4.1",
-    "sinon-as-promised": "^4.0.3",
     "sinon-chai": "^3.3.0"
   },
   "dependencies": {
