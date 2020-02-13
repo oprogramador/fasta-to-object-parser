@@ -30,19 +30,19 @@
   },
   "homepage": "https://github.com/oprogramador/fasta-to-object-parser#readme",
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/register": "^7.5.5",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
     "dirty-chai": "^2.0.1",
-    "eslint": "^6.2.2",
-    "eslint-config-airbnb-improved": "^4.0.13",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-improved": "^4.0.14",
     "mocha": "^7.0.1",
     "sinon": "^8.1.1",
-    "sinon-chai": "^3.3.0"
+    "sinon-chai": "^3.4.0"
   },
   "dependencies": {
     "lodash": "^4.17.15"
