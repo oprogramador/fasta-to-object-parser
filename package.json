@@ -1,6 +1,6 @@
 {
   "name": "fasta-to-object-parser",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "DNA parser of FASTA format",
   "main": "build/index.js",
   "scripts": {
